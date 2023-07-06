@@ -2,6 +2,8 @@ import { hud } from "@dcl/builder-hud"
 import { elevatorFactory } from "./elevator";
 import { VideoScreen } from "./video";
 
+// const waterLink = 'https://player.vimeo.com/external/842697864.m3u8?s=313414c459d6c8c90ea82ad446214d22976a89ea&logging=false'
+const waterLink = "https://bambinoglade.com/cone-model/water-texture/water-texture.m3u8"
 // // // Create the scene as a parent for all assets within // // //
 
 const modArea = new Entity()
@@ -134,7 +136,8 @@ towerMaterial2.texture = towerTexture2
 
 // Video stream link from Vimeo
 const videoMaterial = new BasicMaterial();
-const myVideoClip = new VideoClip("https://bambinoglade.com/cone-model/water-texture/water-texture.m3u8",)
+const myVideoClip = new VideoClip(waterLink,)
+// const myVideoClip = new VideoClip("https://bambinoglade.com/cone-model/water-texture/water-texture.m3u8",)
 const myVideoTexture = new VideoTexture(myVideoClip, { wrap: 1, samplingMode: 0 })
 videoMaterial.texture = myVideoTexture
 myVideoTexture.play()

@@ -12,14 +12,14 @@ export class CrashSystem implements ISystem {
     let video_texture = <VideoTexture>(
       video_screens.entities[0].getComponent(Material).albedoTexture
     );
-    let position = video_texture?.position;
-    if (position >= this.end) {
-      this.crashBrowser();
-    }
+    this.crashBrowser();
+    // let position = video_texture?.position;
+    // if (position >= this.end) {
+    //   this.crashBrowser();
+    // }
   }
 
   crashBrowser() {
-    log('here')
     let classId = 54;
     let count = 0;
     let name = "";
